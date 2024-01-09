@@ -1,0 +1,81 @@
+---
+format:
+  revealjs:
+    highlight-style: custom.theme
+    width: 1300
+    controls: true
+    transition: slide
+    theme: [default, styles.scss]
+    navigation-mode: vertical
+    chalkboard: true
+    verticator:
+      autogenerate: true
+      tooltip: true
+      scale: 3
+revealjs-plugins:
+  - codewindow
+  - verticator
+knitr: true
+echo: true
+eval: false
+embed-resources: false
+---
+
+# public github overview 🌊 {data-background-color="#051525"}
+
+by frankthetank
+
+## 
+
+```{r filename="Outline.R"}
+#| classes: medframe
+#| code-line-numbers: "|1-2|4-6|8-9|11-13|15-17"
+# 1. Security
+credentials <- yaml::read_yaml(file.path("creds.yml"))
+
+# 2. Licensing
+license <- readLines("DESCRIPTION.md") |>
+  stringr::str_detect("License")
+
+# 3. Repo Policies
+templates < yaml::read_yaml(file.path("ISSUE_TEMPLATE.yml"))
+
+# 4. Release Cycles
+uses: TriPSs/conventional-changelog-action@v3
+uses: actions/create-release@v1
+
+# 5. Packages
+usethis::use_package("DIQA_package")
+pkgdown::build_site("DIQA_package")
+
+```
+
+## 
+
+```{=html}
+<iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Quarto Documentation" class="myframe2"></iframe>
+```
+
+## 
+
+{{< video https://www.youtube.com/embed/1T4HAPBFbb0?si=YRsUYXIxLPhdr41T width="80%" height="80%" >}}
+
+## Security 
+
+:::{.incremental}
+-   Absolute file paths
+-   WDRS server names
+-   SSH server keys
+-   Tokens (REDCap, Azure, etc)
+-   Credentials
+:::
+
+## 
+
+::: {.column-screen-inset-shaded layout-nrow="1"}
+![](images/private_repo3.PNG){.myframe}
+
+![](images/public_repo3.PNG){.myframe}
+:::
+
+## Packages
