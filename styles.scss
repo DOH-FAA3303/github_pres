@@ -30,7 +30,11 @@ $link-color: $theme-yellow;
 
 /*-- scss:rules --*/
 
-section.has-dark-background, section.has-dark-background h1 {
+section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2 {
+  color: $theme-water;
+}
+
+section.has-dark-background{
   color: $theme-water;
 }
 

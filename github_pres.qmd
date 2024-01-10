@@ -23,7 +23,15 @@ embed-resources: false
 
 # public github overview 🌊 {data-background-color="#051525"}
 
-by frankthetank
+frankthetank
+
+## Goals {data-background-color="#051525"}
+
+::: incremental
+1.  Write the documentation that hasn't been written
+2.  Prevent the MPV github trap
+3.  ![](images/dc.gif){.myframe2}
+:::
 
 ## 
 
@@ -56,26 +64,7 @@ pkgdown::build_site("DIQA_package")
 <iframe width="1200" height="600" src="https://nw-page.github.io/standards/" title="Quarto Documentation" class="myframe2"></iframe>
 ```
 
-## 
+## Release Cycles
 
-{{< video https://www.youtube.com/embed/1T4HAPBFbb0?si=YRsUYXIxLPhdr41T width="80%" height="80%" >}}
-
-## Security 
-
-:::{.incremental}
--   Absolute file paths
--   WDRS server names
--   SSH server keys
--   Tokens (REDCap, Azure, etc)
--   Credentials
-:::
-
-## 
-
-::: {.column-screen-inset-shaded layout-nrow="1"}
-![](images/private_repo3.PNG){.myframe}
-
-![](images/public_repo3.PNG){.myframe}
-:::
 
 ## Packages
