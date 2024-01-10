@@ -18,7 +18,7 @@ revealjs-plugins:
 knitr: true
 echo: true
 eval: false
-embed-resources: false
+embed-resources: true
 ---
 
 # public github overview 🌊 {data-background-color="#051525"}
